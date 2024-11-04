@@ -1,0 +1,78 @@
+{
+    "riz":[
+        {
+            "id":1,
+            "nom":"Meme casse",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":2,
+            "nom":"Bijou",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":3,
+            "nom":"Yagoua",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":4,
+            "nom":"Alvin",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":5,
+            "nom":"Meme casse",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        }
+
+    ],
+    "pattes":[
+        {
+            "id":1,
+            "nom":"La Pasta",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":2,
+            "nom":"Dorée",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":3,
+            "nom":"Macaroni",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":4,
+            "nom":"Bourgois",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        },
+        {
+            "id":5,
+            "nom":"Le même",
+            "image":"",
+            "description":"description",
+            "disponibilite":true
+        }
+
+    ]
+}

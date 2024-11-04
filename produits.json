@@ -1,0 +1,18 @@
+{
+    "riz":[
+        {"id":1, "nom":"Meme casse" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description: 50Kg" , "disponibilite":true},
+        {"id":2, "nom":"Bijou" , "image":"./images/riz/bijou.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":3, "nom":"basmati" , "image":"./images/riz/basmati.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":4, "nom":"Alvin" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":5, "nom":"Yagoua" , "image":"./images/riz/basmati.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":6, "nom":"Yagouza" , "image":"./images/riz/basmati.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true}
+    ],
+    "pattes":[
+        {"id":1, "nom":"La Pasta" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":2, "nom":"Dorée" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":3, "nom":"Macaroni" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":4, "nom":"Bourgois" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true},
+        {"id":5, "nom":"Le même" , "image":"./images/riz/memeCasse.jpg" , "prix": 1500 , "quantite":"25" , "description":"description" , "disponibilite":true}
+
+    ]
+}

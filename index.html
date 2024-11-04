@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeCoursier</title>
+ <!-- BOOTSTRAP CSS & JS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./assets/js/color-modes.js"></script>
+
+    <!-- SWIPER CSS  -->
+    <link href="./styles/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="./styles/stylesheet.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar d-flex bg-dark text-white px-4 mb-0 pb-0 justify-content-center">
+            <div class="col-sm-12 d-inline-flex">
+                <img src="./images/logo.png" width="50" height="50" class="rounded mr-2" alt="">
+                <h1 class="ms-2">LeCoursier</h1>
+            </div>
+            <div class="container col-sm-12 justify-content-center m-0 p-0">
+                <div class="row w-100 m-0 p-0">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <ul class="nav nav-tabs border-0 justify-content-center fs-5" role="tablist">
+                            <li class="nav-item">
+                                <a href="#article" class="nav-link active show" data-toggle="tab" aria-selected="true">Articles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#mesAchats" class="nav-link" aria-selected="false" role="tab" data-toggle="tab">Mes Achats</a>
+                            </li>
+                        </ul>
+                        <div class="barre rounded-pill bg-primary" id="barre"></div>
+                    </div>
+                    <div class="col-sm-3 px-0 d-flex justify-content-end">
+                        <form action="" class="formSearch">
+                            <input type="search" class="search" autofocus required>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="">
+        <div class="tab-content" role="tablist">
+            <div class="tab-pane active fade show listeProduits" id="article" role="tabpanel" style="width: 100%;">
+                
+            </div>
+            <div class="tab-pane fade" id="mesAchats" role="tabpanel">
+                
+            </div>
+        </div>
+    
+        <!-- <section class="shadow my-5 mx-0 py-5 sectionRiz">
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <img src="images/riz/basmati.jpg" alt="" class="card-img">
+                                </div>
+                                
+                            </div>
+
+                            <div class="card-content">
+                                <h2 class="name">Basmati</h2>
+                                <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                <button class="btn btn-primary button mb-3">Voir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-pagination"></div>
+            </div>
+        </section> -->
+        
+    </main>
+    <footer class="bg-light">
+        <embed src="" type="">
+    </footer>
+    
+    <!-- script navigation -->
+    <script src="./js/navigation/jquery-slim.min.js"></script>
+    <script src="./js/navigation/util.js"></script>
+    <script src="./js/navigation/tab.js"></script>
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<!-- SWIPER JS  -->
+<script src="./js/swiper-bundle.min.js" defer></script>
+
+<script src="./js/script.js"></script>
+<script src="./js/produits.js" defer></script>
+<script src="./js/mes_achats.js" defer></script>
+
+
+
+</html>
