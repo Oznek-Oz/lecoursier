@@ -24,7 +24,7 @@
             <div class="container col-sm-12 justify-content-center m-0 p-0">
                 <div class="row w-100 m-0 p-0">
                     <div class="col-sm-3"></div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-6 pb-0 mb-0">
                         <ul class="nav nav-tabs border-0 justify-content-center fs-5" role="tablist">
                             <li class="nav-item">
                                 <a href="#article" class="nav-link active show" data-toggle="tab" aria-selected="true">Articles</a>
@@ -37,7 +37,8 @@
                     </div>
                     <div class="col-sm-3 px-0 d-flex justify-content-end">
                         <form action="" class="formSearch">
-                            <input type="search" class="search" autofocus required>
+                            <img src="./images/icons/s.png" alt="Que recherchez-vous ?" class="fa fa-search">
+                            <input type="search" class="search bg-transparent form-control" autofocus required>
                         </form>
                     </div>
                 </div>
@@ -51,7 +52,57 @@
                 
             </div>
             <div class="tab-pane fade" id="mesAchats" role="tabpanel">
-                
+                <div class="container-fluid container-achats p-0">
+                    <h2 class="px-3 text-md-center">Vous trouverez ici la liste des produits sélectionnés.</h2>
+                    <div class="row p-0">
+                        <div class="achats col-md-8 text-white bg-dark pt-4">
+                            <h3 class="mb-4">Mes achats</h3>
+                            <div class="container table-responsive mt-3">
+                                <table class="table table-rounded table-bordered table-striped table-hover shadow">
+                                    <thead class="text-center">
+                                        <tr>
+                                            <th scope = "col">Désignation</th>
+                                            <th scope = "col">Prix(XAF)</th>
+                                            <th scope="col">Quantité</th>
+                                            <th scope="col">Total(XAF)</th>
+                                            <th scope="col">Action</th>
+                                        </tr>                               
+                                    </thead>
+                                    <tbody class="text-center tElement align-items-center">
+                                        <tr class="text-center emptyRow">
+                                            <td colspan="4" class="text-secondary"><i>Ajouter un article</i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class = "row m-2">
+                                <div class="col-sm-6 g-3">
+                                    <select class="form-select bg-light">
+                                        <option disabled selected>Moyen de payement</option>
+                                        <option class="option">Orange Money</option>
+                                        <option class="option">MTN Mobile Money</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 g-3">
+                                    <select class="form-select bg-light">
+                                        <option disabled selected>Lieu de livraison</option>
+                                        <option class="option">Ouro Tchede</option>
+                                        <option class="option">Palar</option>
+                                        <option class="option">Baoliwol</option>
+                                        <option class="option">Misinglio</option>
+                                        <option class="option">Sekande</option>
+                                        <option class="option">Djarengol</option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4 facture bg-light mx0">
+                            <h3 class="px-3">Ma facture</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     
@@ -85,7 +136,7 @@
         </section> -->
         
     </main>
-    <footer class="bg-light">
+    <footer class="" style="background-color: bisque;">
         <embed src="" type="">
     </footer>
     
@@ -103,6 +154,7 @@
 
 <script src="./js/script.js"></script>
 <script src="./js/produits.js" defer></script>
+<script src="./js/swipper.js" type="module"></script>
 <script src="./js/mes_achats.js" defer></script>
 
 
