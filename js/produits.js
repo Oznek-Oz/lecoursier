@@ -287,8 +287,8 @@ function dansMesAchats(mesAchats){
                 <td>${mesAchats[i].quantite}</td>
                 <td>${ calculMontant(mesAchats[i].quantite,mesAchats[i].prix) }</td>
                 <td>
-                <button class="editButton btn btn-sm p-0 m-0"><img src="./images/icons/edit.png" class="editIcon p-0"></button>
-                <button class="deleteButton btn btn-sm p-0 m-0"><img src = "./images/icons/supp.png" class="deleteIcon p-0"></button>
+                <button class="editButton btn btn-sm p-0 m-0"><img src="./images/icons/edit.png" class="editIcon p-0" alt="editer"></button>
+                <button class="deleteButton btn btn-sm p-0 m-0"><img src = "./images/icons/supp.png" class="deleteIcon p-0 alt="supprimer"></button>
                 </td>
                </tr>
               `;
