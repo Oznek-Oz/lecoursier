@@ -1,23 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-weight: 'Poppins', sans-serif;
+    font-weight: "Poppins", sans-serif !important;
 }
-.formSearch{
-    position:relative;
+.formSearch {
+    position: relative;
     right: 0%;
     top: 0%;
     transition: all 1s;
     width: 50px;
     height: 50px;
     background-color: white;
-    border:4px solid white; 
+    border: 4px solid white;
     padding: 5px;
+    border-radius: 50px;
 }
-input.search{
+.fa {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+input.search {
     position: absolute;
     top: 0;
     right: 0;
@@ -26,18 +40,30 @@ input.search{
     line-height: 30px;
     outline: 0;
     font-size: 1em;
-    border-radius: 20px;
+    border-radius: 50px;
     padding: 0 20px;
 }
 
-form:hover input,
-form:focus-within input,
+form:focus-within,
+form:hover,
 form:valid {
-    background: #07051a;
+    width: 200px;
+    cursor: pointer;
+}
+
+form:hover input.search,
+form:focus-within input.search,
+form:valid input.search {
+    width: 100%;
+}
+form:hover .fa,
+form:focus-within .fa,
+form:valid .fa {
+    background: rgb(233, 97, 43);
     color: white;
 }
 
-.slide-container{
+.slide-container {
     position: relative;
     z-index: 1;
     padding: 40px;
@@ -46,66 +72,72 @@ form:valid {
     background-image: url("../images/riz/riz-flou.jpg") !important;
     background-repeat: no-repeat;
     background-position: center;
-
 }
 
-.slide-content{
+.slide-content {
     margin: 0 40px;
     width: 300px;
 }
-.fleche{
+.fleche {
     animation: clignote 1s infinite;
 }
-@keyframes clignote{
-    0%{opacity: 1;}
-    50%{opacity: 0;}
-    100%{opacity: 1;}
+@keyframes clignote {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.card{
+.card {
     border: none;
     border-radius: 25px;
     background-color: #020520;
-    transition:transform 0.3s;
+    transition: transform 0.3s;
     border-color: white;
 }
-.card:hover{
+.card:hover {
     transform: scale(1.03);
     box-shadow: 0 0 20px;
 }
-.nav-item:hover{
+.nav-item:hover {
     border-bottom: blue;
 }
 
-.barre{
-    position:absolute;
+.barre {
+    position: absolute;
     bottom: -0.25em;
-    left: 0em ;
+    left: 0em;
     width: 3em !important;
     height: 0.3em;
     transition: 0.3s ease;
 }
-.barreEffetAchats{
+.barreEffetAchats {
     background-color: white !important;
-    box-shadow: 0px 0px 10px rgb(255, 166, 144),
-                0px 0px 20px rgb(103, 108, 114),
-                0px 0px 40px rgb(93, 99, 255),
-                0px 0px 80px rgb(255, 55, 0);
+    box-shadow:
+        0px 0px 10px rgb(255, 166, 144),
+        0px 0px 20px rgb(103, 108, 114),
+        0px 0px 40px rgb(93, 99, 255),
+        0px 0px 80px rgb(255, 55, 0);
 }
 .image-content,
-.card-content{
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 12px 14px;
 }
 
-.image-content{
+.image-content {
     position: relative;
     row-gap: 5px;
     padding: 25px;
 }
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -115,90 +147,99 @@ form:valid {
     border-radius: 24px 24px 0 24px;
 }
 .overlay::before,
-.overlay::after{
-    content: url('./images/logo.png');
+.overlay::after {
+    content: url("./images/logo.png");
     position: absolute;
     right: 4px;
     bottom: -44px;
     height: 42px;
     width: 42px;
     background-color: rgb(233, 97, 43);
-    background-color:white !important;
+    background-color: white !important;
     border-radius: 50%;
-
 }
-.overlay::after{
+.overlay::after {
     border-radius: 0 25px 0 0;
     border-radius: 50%;
     background-color: #020520;
 }
-.card-image{
+.card-image {
     position: relative;
     height: 150px;
     width: 150px;
     border-radius: 40%;
-    background-color: #FFF;
+    background-color: #fff;
     padding: 3px;
-
 }
 
-.card-image .card-img{
+.card-image .card-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid orangered;
-
 }
-.name{
+.name {
     font-size: 1.8em;
     font-weight: 500;
     color: #333;
 }
-.description{
+.description {
     font-size: 1.4em;
     color: #707070;
     text-align: center;
 }
 
-
-section{
-   display: flex;
-   align-items: center;
-   justify-content: center; 
-   background-color: #EFEFEF;  
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
 }
 
 h1 {
-    font-family:Impact sans-serif;
+    font-family: Impact sans-serif;
 }
-.col-md-8{
-    display: grid;
+.col-md-8 {
     place-items: center;
 }
-form{
+form {
     display: flex;
     flex-direction: row;
 }
 
-nav{
+nav {
     width: 100dvw;
+    background: linear-gradient(45deg, black, #0f0f2b) !important;
 }
 
-
-.card{
+.card {
     margin: 0 5px;
 }
 
-.container-achats{
+.container-achats {
     border-top: 2px solid wheat;
-    height: 100dvh;
     background-color: bisque;
 }
-.facture{
-    height: 100dvh;
+.container-achats > .row {
+    min-height: 800px;
 }
-.achats{
-    height: 100dvh;
+.form-select option:checked,
+.form-slect option:hover{
+    background-color: rgb(233, 97, 43) !important;
+}
+
+/* ICONS*/
+.editIcon,
+.deleteIcon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    
+}
+
+.table-rounded{
+    border-radius: 5px;
+    overflow: hidden;
 }
 
