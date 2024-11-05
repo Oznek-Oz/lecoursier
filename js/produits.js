@@ -14,24 +14,26 @@ async function fetchData() {
         console("Impossible de contacter le serveur. "+ erreur);
     }
 }
-fetchData()
+fetchData();
 
 var mesAchats = [];
+var id = 1 ;
 function init(produits){
     /**Converti produits qui est un objet en tableau cle,produits */
     produitsCleValeur = Object.entries(produits); 
     
-    /**Creation d'une section contenant les produits de chaque catégorie */
+    /**Creation d'une section contenant les produits de chaque catégorie (riz, pattes,...) */
     produitsCleValeur.forEach(([cle,categorie]) => {
         addSection(cle,categorie);
     });
     let montantAPayer = 0;
+    
     produitsCleValeur.forEach(([cle, categorie]) => {
 
         const baliseSection = document.querySelector(`section .${cle}`);
         const cardWrapper = document.querySelector(`.${cle}`);
         
-        /**element représente les différentes marque de produit de chaque catégorie */
+        /**element représente les différentes marque de produit de chaque catégorie (yagoua, meme casse,...) */
         categorie.forEach(element => {
 
             const card = cardWrapper.querySelector(`.card[aria-label="${element.id}"]`);
@@ -72,8 +74,10 @@ function init(produits){
                     
                     if(click){ //element ajouté
 
-                        mesAchats.push(element);
-                        console.log(mesAchats);
+                        //mesAchats.push(element);
+                        const mesElements=articleEtQuantite(element, quantite);
+                        console.log(mesElements);
+                        dansMesAchats(mesElements);
                         
                         montantAPayer += calculMontant(inputQuantite.value, parseInt(element.prix));
                         console.log(montantAPayer);
@@ -119,10 +123,11 @@ function init(produits){
                 }
             });
         });
-    })
+    });
 
 
     /**JS des slides */
+    //swipperJS();
     var swiper = new Swiper(".slide-content", {
         slidesPerView: 1,
         spaceBetween: 30,
@@ -139,6 +144,10 @@ function init(produits){
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
         },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+       
         /*effect:'fade',
         fadeEffect:{
             crossFade:true,
@@ -246,9 +255,45 @@ function navbarDisplay() {
     });
 }
 
+/** Cette fonction retourne un tableau conternant les articles choisie et leur quantités */
+function articleEtQuantite(element, quantite){
+    /** Verifions si l'article existe déjà */
+   //const existanceArticle = mesAchats.find(article => article.nom === element.nom);
+    //console.log(existanceArticle);
+    const nouveauChoixElement = {
+        id : id,
+        nom : element.nom,
+        prix : element.prix,
+        quantite : quantite
+    };
+    id++;
+    mesAchats.push(nouveauChoixElement);
+    console.log(mesAchats);
+    return mesAchats;
+}
+
 function dansMesAchats(mesAchats){
-    const listeArticles = document.getElementById('mesArticles');
-    mesAchats.forEach(article => {
-        
-    })
+    const listeArticles = document.getElementById('mesAchats');
+    console.log(listeArticles);
+    const divAchats = listeArticles.querySelector('.achats');
+    const tElement = divAchats.querySelector('.tElement');
+    tElement.innerHTML='';
+    let save;
+    for(let i = 0 ; i < mesAchats.length ; i++){
+        const row = 
+              `<tr>
+                <td>${mesAchats[i].nom}</td>
+                <td>${mesAchats[i].prix} XAF</td>
+                <td>${mesAchats[i].quantite}</td>
+                <td>${ calculMontant(mesAchats[i].quantite,mesAchats[i].prix) }</td>
+                <td>
+                <button class="editButton btn btn-sm p-0 m-0"><img src="../images/icons/edit.png" class="editIcon p-0"></button>
+                <button class="deleteButton btn btn-sm p-0 m-0"><img src = "../images/icons/supp.png" class="deleteIcon p-0"></button>
+                </td>
+               </tr>
+              `;
+        save += row;
+        console.log(save);
+        tElement.innerHTML += row; 
+    }
 }
