@@ -14,17 +14,17 @@
     <link href="./styles/stylesheet.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="w-100">
     <header>
         <nav class="navbar d-flex bg-dark text-white px-4 mb-0 pb-0 justify-content-center">
-            <div class="col-sm-12 d-inline-flex">
+            <div class="entete col-sm-12 d-inline-flex">
                 <img src="./images/logo.png" width="50" height="50" class="rounded mr-2" alt="">
                 <h1 class="ms-2">LeCoursier</h1>
             </div>
             <div class="container col-sm-12 justify-content-center m-0 p-0">
                 <div class="row w-100 m-0 p-0">
                     <div class="col-sm-3"></div>
-                    <div class="col-sm-6 pb-0 mb-0">
+                    <div class="coulisse col-sm-6 pb-0 mb-0 g-2">
                         <ul class="nav nav-tabs border-0 justify-content-center fs-5" role="tablist">
                             <li class="nav-item">
                                 <a href="#article" class="nav-link active show" data-toggle="tab" aria-selected="true">Articles</a>
@@ -35,8 +35,8 @@
                         </ul>
                         <div class="barre rounded-pill bg-primary" id="barre"></div>
                     </div>
-                    <div class="col-sm-3 px-0 d-flex justify-content-end">
-                        <form action="" class="formSearch mb-2">
+                    <div class="col-sm-3 px-0 d-flex justify-content-end m-0 p-0">
+                        <form class="formSearch m-0 p-0">
                             <img src="./images/icons/s.png" alt="Que recherchez-vous ?" class="fa fa-search">
                             <input type="search" class="search bg-transparent form-control" autofocus required>
                         </form>
@@ -53,7 +53,7 @@
             </div>
             <div class="tab-pane fade" id="mesAchats" role="tabpanel">
                 <div class="container-fluid container-achats p-0">
-                    <h2 class="px-3 text-md-center">Vous trouverez ici la liste des produits sélectionnés.</h2>
+                    <h2 class="px-3 text-center py-4">Vos <span style="color: rgb(233, 97, 43)">produits</span> sélectionnés ici <img src="./images/icons/fleche.png" width="30" height="30"></h2>
                     <div class="row p-0">
                         <div class="achats col-md-8 text-white bg-dark pt-4">
                             <h3 class="mb-4">Mes achats</h3>
@@ -62,7 +62,7 @@
                                     <thead class="text-center">
                                         <tr>
                                             <th scope = "col">Désignation</th>
-                                            <th scope = "col">Prix(XAF)</th>
+                                            <th scope = "col">PU(XAF)</th>
                                             <th scope="col">Quantité</th>
                                             <th scope="col">Total(XAF)</th>
                                             <th scope="col">Action</th>
@@ -98,8 +98,8 @@
                             </div>
                         </div>
                         
-                        <div class="col-md-4 facture bg-light mx0">
-                            <h3 class="px-3">Ma facture</h3>
+                        <div class="col-md-4 facture bg-light mx-0 pt-4">
+                            <h3 class="text-center">Ma facture</h3>
                         </div>
                     </div>
                 </div>
@@ -136,8 +136,37 @@
         </section> -->
         
     </main>
-    <footer class="" style="background-color: bisque;">
-        <embed src="" type="">
+    <footer class="p-3 pt-5" style="background-color: bisque;">
+        <div class="row">
+            <div class="col">
+                <p class="fw-bolder fs-2">
+                    <img src="./images/logo.png" width="50" height="50" class="rounded mr-2 ms-3" alt="">
+                    LeCoursier
+                </p>
+                <br>
+                <p>Faites vos courses en ligne et nous vous l'apportons chez vous.</p>
+            </div>
+            <div class="col">
+                <h3 class="ms-2 fw-bolder" style="font-family: Arial, sans-serif">Info Contacts</h3>
+                <br>
+                <p><img src="./images/icons/mail.png" width="30" height="30"> info@lecoursier.com</p>
+                <p>+237 222 122 322 / +237 697 789 456</p>
+                <p><img src="./images/svg/location-dot.svg" width="30" height="30"> Collège de l'espoir, Ouro-Tchede, Maroua</p>
+            </div>
+            <div class="col">
+                <h3 class="ms-2 fw-bolder" style="font-family: Arial, sans-serif">Nos réseaux sociaux</h3>
+                <br>
+                <p><img src="./images/svg/whatsapp.svg" width="30" height="30"> whatsapp</p>
+                <p><img src="./images/icons/facebook.png" width="30" height="30"> facebook</p>
+                <p><img src="./images/svg/X-twitter.svg" width="30" height="30"> X-twitter</p>
+                <p><img src="./images/icons/instagram.png" width="30" height="30"> instagram</p>
+                <p><img src="./images/svg/telegram.svg" width="30" height="30"> telegram</p>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
     </footer>
     
     <!-- script navigation -->
@@ -149,8 +178,10 @@
 
 </body>
 
-<!-- SWIPER JS  -->
+</html>
 <script src="./js/swiper-bundle.min.js" defer></script>
+
+<!-- SWIPER JS  -->
 
 <script src="./js/script.js"></script>
 <script src="./js/produits.js" defer></script>
@@ -158,5 +189,3 @@
 <script src="./js/mes_achats.js" defer></script>
 
 
-
-</html>
