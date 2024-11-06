@@ -278,22 +278,29 @@ function dansMesAchats(mesAchats){
     const divAchats = listeArticles.querySelector('.achats');
     const tElement = divAchats.querySelector('.tElement');
     tElement.innerHTML='';
-    let save;
+    let total = 0;
     for(let i = 0 ; i < mesAchats.length ; i++){
+        total += calculMontant(mesAchats[i].quantite,mesAchats[i].prix);
+        
         const row = 
               `<tr>
                 <td>${mesAchats[i].nom}</td>
-                <td>${mesAchats[i].prix} XAF</td>
+                <td>${mesAchats[i].prix}</td>
                 <td>${mesAchats[i].quantite}</td>
                 <td>${ calculMontant(mesAchats[i].quantite,mesAchats[i].prix) }</td>
                 <td>
-                <button class="editButton btn btn-sm p-0 m-0"><img src="./images/icons/edit.png" class="editIcon p-0" alt="editer"></button>
-                <button class="deleteButton btn btn-sm p-0 m-0"><img src = "./images/icons/supp.png" class="deleteIcon p-0 alt="supprimer"></button>
+                <button class="editButton btn btn-sm p-0 m-0"><img src="../images/icons/edit.png" class="editIcon p-0"></button>
+                <button class="deleteButton btn btn-sm p-0 m-0"><img src = "../images/icons/supp.png" class="deleteIcon p-0"></button>
                 </td>
                </tr>
               `;
-        save += row;
-        console.log(save);
         tElement.innerHTML += row; 
     }
+    tElement.innerHTML += 
+        `
+            <tr>
+                <th colspan="4">Totaux</th>
+                <td colspan="4">${total}</td>
+            </tr>
+        `;
 }
