@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-weight: "Poppins", sans-serif !important;
 }
+
 .formSearch {
     position: relative;
     right: 0%;
@@ -18,6 +19,44 @@
     padding: 5px;
     border-radius: 50px;
 }
+.coulisse{
+        position: relative;
+    transition: all 1s;
+}
+#mesAchats{
+        transition: all 1s;
+}
+@media (max-width:575px){
+    header{
+        position: relative;
+        height: 150px;
+    }
+    .entete{
+        padding: 15px;
+    }
+    .formSearch{
+        position: absolute;
+        top:110%;
+        right: 5%;
+    }
+    .coulisse{
+        position: absolute;
+        top: 160%;
+        right: 1%;
+        width: 100%;
+        background-color: #020520;
+        color: #020520 !important;
+    }
+    #mesAchats{
+        transition: all 1s;
+        margin-top: 50px;
+    }
+    .slide-container{
+        margin-inline: 0 !important;
+        border-radius: 0 !important;
+    }
+}
+
 .fa {
     box-sizing: border-box;
     padding: 10px;
@@ -75,7 +114,7 @@ form:valid .fa {
 }
 
 .slide-content {
-    margin: 0 40px;
+    margin: 0 -22px;
     width: 300px;
 }
 .fleche {
@@ -120,8 +159,7 @@ form:valid .fa {
     background-color: white !important;
     box-shadow:
         0px 0px 10px rgb(255, 166, 144),
-        0px 0px 20px rgb(103, 108, 114),
-        0px 0px 40px rgb(93, 99, 255),
+        0px 0px 40px rgb(184, 4, 237),
         0px 0px 80px rgb(255, 55, 0);
 }
 .image-content,
@@ -227,6 +265,7 @@ nav {
 .form-select option:checked,
 .form-slect option:hover{
     background-color: rgb(233, 97, 43) !important;
+    color: white;
 }
 
 /* ICONS*/
@@ -235,7 +274,6 @@ nav {
     width: 20px;
     height: 20px;
     border-radius: 50px;
-    
 }
 
 .table-rounded{
