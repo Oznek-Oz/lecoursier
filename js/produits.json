@@ -11,7 +11,7 @@
         {"id":1, "nom":"La Pasta" , "image":"./images/pattes/lapasta.jpeg" , "prix": 1500 , "quantite":"200" , "description":"description: 500g" , "disponibilite":true},
         {"id":2, "nom":"Dorée" , "image":"./images/pattes/doree.png" , "prix": 1500 , "quantite":"22" , "description":"description: 500g" , "disponibilite":true},
         {"id":3, "nom":"Macaroni" , "image":"./images/pattes/macaroni.jpg" , "prix": 1500 , "quantite":"78" , "description":"description" , "disponibilite":true},
-        {"id":4, "nom":"Bourgois" , "image":"./images/pattes/bourgeois.jpeg" , "prix": 1500 , "quantite":"52" , "description":"description: 500g" , "disponibilite":true},
+        {"id":3, "nom":"Macaroni" , "image":"./images/pattes/macaroni.jpg" , "prix": 1500 , "quantite":"78" , "description":"Delicious macaroni pasta, perfect for your favorite sauces." , "disponibilite":true},
         {"id":5, "nom":"Le même" , "image":"./images/pattes/lememe.jpg" , "prix": 1500 , "quantite":"62" , "description":"description: 500g" , "disponibilite":true}
 
     ]
