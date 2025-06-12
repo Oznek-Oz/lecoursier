@@ -6,7 +6,7 @@ const articleLink = document.querySelector('a[href="#article"]');
 function updateBarre(el){
   const offsetLeft = (el.offsetLeft  + ((el.offsetWidth) / 2) - ((barre.offsetWidth) / 2))/16 ;
   barre.style.left = `${offsetLeft}em`;
-  console.log(el.offsetLeft+" | "+barre.offsetWidth);
+  // console.log(el.offsetLeft+" | "+barre.offsetWidth);
 }
 
 navItems.forEach((item,index) => {
@@ -17,8 +17,8 @@ navItems.forEach((item,index) => {
 //Position initiale
 document.addEventListener('DOMContentLoaded',() => {
   const activeItem = document.querySelector('.nav-item a.active');
-  console.log(activeItem);
-  
+  // console.log(activeItem);
+
   updateBarre(activeItem);
 })
 
